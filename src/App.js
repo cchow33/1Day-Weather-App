@@ -29,14 +29,14 @@ function App() {
     }
   }
 
-  const searchFiveDay = () => {
-      fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=75e7ccabdef5725374998f0c3f3798b2`)
-        .then(response => response.json())
-        .then(result => {
-          console.log('search five day', result)
-          setFiveDay(result);
-      })
-  }
+//   const searchFiveDay = () => {
+//       fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=75e7ccabdef5725374998f0c3f3798b2`)
+//         .then(response => response.json())
+//         .then(result => {
+//           console.log('search five day', result)
+//           setFiveDay(result);
+//       })
+//   }
 
   return (
     <div className={(typeof weather.main != 'undefined') ? ((weather.main.temp < 18) ? 'App cold' : 'App') : 'App'}>
